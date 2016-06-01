@@ -1,5 +1,28 @@
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH";
+export PATH="/opt/ruby2.2.1/bin/ruby:$PATH"
+export PS1="\u@\h \w\[\033[37m\]\$(parse_git_branch)\[\033[00m\] $ "
+eval "$(rbenv init -)"
+
+export MODIFIED=`git status --short | sed -ne "s/^ M //p"`
+alias edit='$EDITOR $MODIFIED'
+
+## Show full path and current branch in bash
+parse_git_branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
+## Git auto-complete branch names and commands
+## @usage: TAB to complete/show options
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+fi
+
+## Homebrew auto-complete commands
+## @usage: TAB to complete/show options
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+    . `brew --prefix`/etc/bash_completion
+fi
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
@@ -46,3 +69,5 @@ complete -W "NSGlobalDomain" defaults;
 
 # Add `killall` tab completion for common apps
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
+
+[[ -s $HOME/.pythonbrew/etc/bashrc ]] && source $HOME/.pythonbrew/etc/bashrc

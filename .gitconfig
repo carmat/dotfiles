@@ -4,7 +4,7 @@
 	l = log --pretty=oneline -n 20 --graph --abbrev-commit
 
 	# View the current working tree status using the short format
-	s = status -s
+	st = status -s
 
 	# Show the diff between the latest commit and the current state
 	d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
@@ -18,11 +18,30 @@
 	# Clone a repository including all submodules
 	c = clone --recursive
 
-	# Commit all changes
-	ca = !git add -A && git commit -av
+    # Commit staged changes
+    ci = commit
+
+    # Commit all changes
+    # @init: ca = !git add -A && git commit -av
+    cia = commit -a
+
+    # Commit as a fixup to a specified commit
+    fixup = commit -a --fixup
+
+    # Autosquash
+    sq = rebase -i --autosquash
+
+	# Pull all remote changes
+    pr = pull --rebase
+
+    # Create a new branch
+    br = branch
+
+    # Switch to a branch
+    co = checkout
 
 	# Switch to a branch, creating it if necessary
-	go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
+	# go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
 
 	# Show verbose output about tags, branches or remotes
 	tags = tag -l
@@ -149,15 +168,20 @@
 
 	# Include summaries of merged commits in newly created merge commit messages
 	log = true
+    ff = false
 
 [push]
 
 	# Use the Git 1.x.x default to avoid errors on machines with old Git
 	# installations. To use `simple` instead, add this to your `~/.extra` file:
 	# `git config --global push.default simple`. See http://git.io/mMah-w.
-	default = matching
+    default = upstream
 	# Make `git push` push relevant annotated tags when pushing branches out.
 	followTags = true
+
+[branch]
+
+    autosetuprebase = always
 
 # URL shorthands
 

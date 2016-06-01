@@ -1,21 +1,32 @@
 #!/usr/bin/env bash
 
-# Easier navigation: .., ..., ...., ....., ~ and -
+## NAVIGATION
 alias ..="cd .."
-alias ...="cd ../.."
-alias ....="cd ../../.."
-alias .....="cd ../../../.."
 alias ~="cd ~" # `cd` is probably faster to type though
-alias -- -="cd -"
+# alias ...="cd ../.."
+# alias ....="cd ../../.."
+# alias .....="cd ../../../.."
+# alias -- -="cd -"
 
-# Shortcuts
-alias d="cd ~/Documents/Dropbox"
+## SHORTCUTS
+alias db="cd ~/Dropbox"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
-alias p="cd ~/projects"
-alias g="git"
+alias prj='cd ~/Projects/'
 alias h="history"
-alias j="jobs"
+alias cc='clear'
+# alias j="jobs"
+alias pr='git fetch && git pull --rebase'
+alias ghash='git rev-parse HEAD && git rev-parse HEAD | pbcopy'
+alias glog='git log --color --graph --full-history --all --abbrev-commit --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset"'
+alias gs='open https://status.github.com/'
+# alias htdocs='cd /Applications/XAMPP/xamppfiles/htdocs/'
+
+# @usage: $ compare branch1..branch2
+alias compare="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
+
+## TYPOS
+alias gti='git'
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
@@ -48,10 +59,10 @@ alias egrep='egrep --color=auto'
 alias sudo='sudo '
 
 # Get week number
-alias week='date +%V'
+# alias week='date +%V'
 
 # Stopwatch
-alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
+# alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
 
 # Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
 alias update='sudo softwareupdate -i -a; brew update; brew upgrade --all; brew cleanup; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update'
