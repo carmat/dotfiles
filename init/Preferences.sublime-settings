@@ -2,14 +2,14 @@
     "bold_folder_labels": true,
     "caret_style": "phase",
     "close_windows_when_empty": true,
-    "color_scheme": "Packages/User/Monokai (SL).tmTheme",
+    "draw_indent_guides": true,
+    "default_encoding": "UTF-8",
+    "default_line_ending": "unix",
+    "detect_indentation": false,
     "draw_indent_guides": true,
     "draw_white_space": "selection",
     "ensure_newline_at_eof_on_save": true,
     "fade_fold_buttons": false,
-    "default_encoding": "UTF-8",
-    "default_line_ending": "unix",
-    "detect_indentation": false,
     "file_exclude_patterns":
     [
         ".DS_Store",
@@ -26,11 +26,11 @@
         ".bundle",
         ".sass-cache",
         ".svn",
-        ".hg"
+        ".hg",
         "node_modules"
     ],
-    "font_size": 14.0,
     "font_face": "Monaco",
+    "font_size": 14.0,
     "highlight_line": true,
     "highlight_modified_tabs": true,
     "hot_exit": false,
