@@ -6,7 +6,6 @@
     "default_encoding": "UTF-8",
     "default_line_ending": "unix",
     "detect_indentation": false,
-    "draw_indent_guides": true,
     "draw_white_space": "selection",
     "ensure_newline_at_eof_on_save": true,
     "fade_fold_buttons": false,
@@ -62,10 +61,6 @@
     "open_files_in_new_window": false,
     "remember_open_files": true,
     "remember_open_folders": true,
-    "rulers":
-    [
-        80
-    ],
     "scroll_past_end": true,
     "scroll_speed": 2,
     "show_encoding": true,
