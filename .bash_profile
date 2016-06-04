@@ -1,7 +1,10 @@
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH";
+# Use Ruby 2.2.1
 export PATH="/opt/ruby2.2.1/bin/ruby:$PATH"
-export PS1="\u@\h \w\[\033[37m\]\$(parse_git_branch)\[\033[00m\] $ "
+# Use PHP 5.6.21
+export PATH="/usr/local/php5/bin:$PATH"
+
 eval "$(rbenv init -)"
 
 export MODIFIED=`git status --short | sed -ne "s/^ M //p"`
