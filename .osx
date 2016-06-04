@@ -114,6 +114,9 @@ sudo systemsetup -setrestartfreeze on
 # Check for software updates daily, not just once per week
 # defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 
+# Activate `locate` function
+launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
+
 # Disable Notification Center and remove the menu bar icon
 # launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2> /dev/null
 
@@ -750,6 +753,14 @@ defaults write com.operasoftware.OperaDeveloper PMPrintingExpandedStateForPrint2
 
 # Don’t show the preferences window on next start
 # defaults write com.irradiatedsoftware.SizeUp ShowPrefsOnNextStart -bool false
+
+###############################################################################
+# PHP (php.ini)                                                               #
+###############################################################################
+
+/usr/local/php5-5.6.21-20160524-232350/lib/php.ini-recommended
+# Install `php.ini` settings
+cp -r init/php.ini /usr/local/php5-5.6.21-20160524-232350/lib/php.ini-recommended 2> /dev/null
 
 ###############################################################################
 # Sublime Text                                                                #
