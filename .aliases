@@ -18,6 +18,7 @@ alias cc='clear'
 # alias j="jobs"
 alias pr='git fetch && git pull --rebase'
 alias ghash='git rev-parse HEAD && git rev-parse HEAD | pbcopy'
+alias graph='git log --color --graph --abbrev-commit --pretty=oneline'
 alias glog='git log --color --graph --full-history --all --abbrev-commit --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset"'
 alias gs='open https://status.github.com/'
 # alias htdocs='cd /Applications/XAMPP/xamppfiles/htdocs/'
