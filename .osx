@@ -212,7 +212,8 @@ launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/nul
 # defaults write com.apple.screensaver askForPasswordDelay -int 0
 
 # Save screenshots to '/Desktop/screenshots'
-defaults write com.apple.screencapture location -string "${HOME}/Desktop/screenshots"
+# defaults write com.apple.screencapture location -string "${HOME}/Desktop/screenshots"
+defaults write com.apple.screencapture location ~/Desktop/screenshots
 
 # Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
 defaults write com.apple.screencapture type -string "png"
@@ -818,7 +819,7 @@ defaults write com.twitter.twitter-mac HideInBackground -bool true
 ###############################################################################
 
 # Bypass the annoyingly slow t.co URL shortener
-# defaults write com.tapbots.TweetbotMac OpenURLsDirectly -bool true
+defaults write com.tapbots.TweetbotMac OpenURLsDirectly -bool true
 
 ###############################################################################
 # Spectacle.app                                                               #
