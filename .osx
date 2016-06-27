@@ -249,7 +249,8 @@ defaults write com.apple.finder ShowMountedServersOnDesktop -bool true
 defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
 
 # Finder: show hidden files by default
-defaults write com.apple.finder AppleShowAllFiles -bool true
+# defaults write com.apple.finder AppleShowAllFiles -bool true
+defaults write com.apple.finder AppleShowAllFiles YES
 
 # Finder: show all filename extensions
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
@@ -759,9 +760,11 @@ defaults write com.operasoftware.OperaDeveloper PMPrintingExpandedStateForPrint2
 # PHP (php.ini)                                                               #
 ###############################################################################
 
-/usr/local/php5-5.6.21-20160524-232350/lib/php.ini-recommended
 # Install `php.ini` settings
-cp -r init/php.ini /usr/local/php5-5.6.21-20160524-232350/lib/php.ini-recommended 2> /dev/null
+# cp -r init/php.ini-recommended /usr/local/php5-5.6.21-20160524-232350/lib/php.ini 2> /dev/null
+sudo cp /etc/php.ini.default /etc/php.ini
+cp -r init/php.ini-recommended /etc/php.ini 2> /dev/null
+sudo apachectl restart
 
 ###############################################################################
 # Sublime Text                                                                #

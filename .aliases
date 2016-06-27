@@ -9,10 +9,12 @@ alias ~="cd ~" # `cd` is probably faster to type though
 # alias -- -="cd -"
 
 ## SHORTCUTS
-alias db="cd ~/Dropbox"
-alias dl="cd ~/Downloads"
-alias dt="cd ~/Desktop"
+alias dx="cd ~/Dropbox/"
+alias dl="cd ~/Downloads/"
+alias dt="cd ~/Desktop/"
 alias prj='cd ~/Projects/'
+alias dot='cd ~/Projects/dotfiles/'
+alias hs='cd ~/.homestead/'
 alias h="history"
 alias cc='clear'
 # alias j="jobs"
@@ -28,6 +30,11 @@ alias compare="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Cre
 
 ## TYPOS
 alias gti='git'
+
+## PHP
+alias v='vagrant'
+alias rebuild='php artisan --env=colm.morgan clear-compiled; composer update; php artisan --env=colm.morgan optimize;'
+alias part='php artisan'
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`

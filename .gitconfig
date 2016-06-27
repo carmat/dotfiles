@@ -39,7 +39,7 @@
 
     # Switch to a branch
     co = checkout
-    
+
     # Cherry pick a commit
     cp = cherry-pick
 
@@ -143,9 +143,9 @@
 
 [color "status"]
 
-	added = yellow
-	changed = green
-	untracked = cyan
+	added = green
+	changed = cyan
+	untracked = red
 
 [commit]
 

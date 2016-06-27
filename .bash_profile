@@ -4,6 +4,8 @@ export PATH="$HOME/bin:$PATH";
 export PATH="/opt/ruby2.2.1/bin/ruby:$PATH"
 # Use PHP 5.6.21
 export PATH="/usr/local/php5/bin:$PATH"
+# Use Composer for Laravel
+export PATH="~/.composer/vendor/bin:$PATH"
 
 eval "$(rbenv init -)"
 
@@ -23,8 +25,8 @@ fi
 
 ## Homebrew auto-complete commands
 ## @usage: TAB to complete/show options
-if [ -f `brew --prefix`/etc/bash_completion ]; then
-    . `brew --prefix`/etc/bash_completion
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    . $(brew --prefix)/etc/bash_completion
 fi
 
 # Load the shell dotfiles, and then some:
@@ -74,3 +76,5 @@ complete -W "NSGlobalDomain" defaults;
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
 
 [[ -s $HOME/.pythonbrew/etc/bashrc ]] && source $HOME/.pythonbrew/etc/bashrc
+
+# ln -s /usr/local/Cellar/openssl/1.0.2h_1/bin/openssl /usr/local/bin/openssl
