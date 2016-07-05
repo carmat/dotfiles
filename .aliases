@@ -33,7 +33,6 @@ alias gti='git'
 
 ## PHP
 alias v='vagrant'
-alias rebuild='php artisan --env=colm.morgan clear-compiled; composer update; php artisan --env=colm.morgan optimize;'
 alias part='php artisan'
 
 # Detect which `ls` flavor is in use
