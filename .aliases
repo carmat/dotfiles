@@ -30,6 +30,8 @@ alias compare="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Cre
 
 ## TYPOS
 alias gti='git'
+# Autocomplete for 'gti' as well
+complete -o default -o nospace -F _git gti
 
 ## PHP
 alias v='vagrant'
