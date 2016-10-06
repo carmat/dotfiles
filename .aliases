@@ -15,6 +15,7 @@ alias dt="cd ~/Desktop/"
 alias prj='cd ~/Projects/'
 alias dot='cd ~/Projects/dotfiles/'
 alias hs='cd ~/.homestead/'
+alias ie='cd ~/vagrant.ie/'
 alias h="history"
 alias cc='clear'
 # alias j="jobs"
