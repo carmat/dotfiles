@@ -270,18 +270,18 @@ function tre() {
 # ====================================
 # @usage: tabname (git)
 # @usage: tabname name (non-git)
-function tabname {
-  if [ "$1" ]; then
-    printf "\e]1;$1\a"
-  elif [ -d .git ]; then
-    repo=$(basename `git rev-parse --show-toplevel`)
-    branch="$(git symbolic-ref --short -q HEAD)" ||
-    branch="(unnamed branch)"     # detached HEAD
-    printf "\e]1;("$repo") "$branch"\a"
-  else
-    printf "\e]1;$1\a"
-  fi
-}
+# function tabname {
+#   if [ "$1" ]; then
+#     printf "\e]1;$1\a"
+#   elif [ -d .git ]; then
+#     repo=$(basename `git rev-parse --show-toplevel`)
+#     branch="$(git symbolic-ref --short -q HEAD)" ||
+#     branch="(unnamed branch)"     # detached HEAD
+#     printf "\e]1;("$repo") "$branch"\a"
+#   else
+#     printf "\e]1;$1\a"
+#   fi
+# }
 
 ## Open the current branch in browser
 ## ====================================
