@@ -105,9 +105,18 @@ else
 	hostStyle="${yellow}";
 fi;
 
+PS1=""
 # Set the terminal title and prompt.
 # @helpful: http://www.cyberciti.biz/tips/howto-linux-unix-bash-shell-setup-prompt.html
-PS1="\[\033]0;\W\007\]"; # working directory base name
+# if [ -d .git ]; then
+#     repo=$(basename `git rev-parse --show-toplevel`)
+#     branch="$(git symbolic-ref --short -q HEAD)" || "(unnamed branch)"
+#     # printf "\e]1;("$repo") "$branch"\a"
+#     PS1+="\[\033]0;\e]1;\($repo\) $branch\a\007\]"; # working directory base name
+# else
+    PS1+="\[\033]0;\W\007\]"; # working directory base name
+# fi
+
 PS1+="\[${bold}\]\n"; # newline
 # PS1+="\[${userStyle}\]\u"; # username
 # PS1+="\[${white}\] at ";
