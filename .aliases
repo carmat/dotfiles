@@ -136,6 +136,11 @@ alias spotoff="sudo mdutil -a -i off"
 # Enable Spotlight
 alias spoton="sudo mdutil -a -i on"
 
+# Disable Wifi
+alias wifioff="networksetup -setairportpower en0 off"
+# Enable Wifi
+alias wifion="networksetup -setairportpower en0 on"
+
 # PlistBuddy alias, because sometimes `defaults` just doesn’t cut it
 alias plistbuddy="/usr/libexec/PlistBuddy"
 
