@@ -9,12 +9,10 @@ alias ~="cd ~" # `cd` is probably faster to type though
 # alias -- -="cd -"
 
 ## SHORTCUTS
-alias dx="cd ~/Dropbox/"
 alias dl="cd ~/Downloads/"
 alias dt="cd ~/Desktop/"
 alias sites='cd ~/Sites/'
-alias dot='cd ~/Sites/dotfiles/'
-alias hs='cd ~/.homestead/'
+alias dot='cd ~/dotfiles/'
 alias h="history"
 alias cc='clear'
 # alias j="jobs"
