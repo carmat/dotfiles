@@ -1,3 +1,4 @@
+export PATH="$PATH:/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin"
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH";
 # Use Ruby 2.2.1
@@ -6,6 +7,9 @@ export PATH="/opt/ruby2.2.1/bin/ruby:$PATH"
 export PATH="/usr/local/php5/bin:$PATH"
 # Use Composer for Laravel
 export PATH="~/.composer/vendor/bin:$PATH"
+# Maven for Java/Tomcat
+export MAVEN_HOME=/Applications/Maven
+export PATH="$PATH:$MAVEN_HOME/bin"
 
 eval "$(rbenv init -)"
 
