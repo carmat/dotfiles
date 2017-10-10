@@ -453,3 +453,20 @@ function gst() {
     git stash show -p stash@{$1}
   fi
 }
+
+## Create Markdown note
+## ====================================
+function note() {
+    local target_dir="$HOME/Notes"
+    local timestamp=$(date +"%Y%M%d")
+    local filepath="$target_dir/$timestamp-$1.md"
+
+    # make a new `~/Notes` directory if it doesn't exist
+    mkdir -p $target_dir
+
+    # create a new file in `~/Notes`
+    touch $filepath
+
+    # open the new file in Sublime
+    subl $filepath
+}
