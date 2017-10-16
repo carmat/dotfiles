@@ -66,7 +66,6 @@
     "show_encoding": true,
     "show_full_path": true,
     "show_line_endings": true,
-    "tab_size": 4,
     "translate_tabs_to_spaces": false,
     "trim_trailing_white_space_on_save": true,
     "wide_caret": true,
