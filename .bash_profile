@@ -6,6 +6,10 @@ export PATH="/opt/ruby2.2.1/bin/ruby:$PATH"
 export PATH="/usr/local/php5/bin:$PATH"
 # Use Composer for Laravel
 export PATH="~/.composer/vendor/bin:$PATH"
+# Use Vue CLI
+export PATH="/usr/local/bin/vue:$PATH"
+export PATH="/usr/local/bin/vue-init:$PATH"
+export PATH="/usr/local/bin/vue-list:$PATH"
 
 eval "$(rbenv init -)"
 
