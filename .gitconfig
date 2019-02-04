@@ -163,6 +163,14 @@
 	# Detect copies as well as renames
 	renames = copies
 
+    # Set diff tool
+    tool = default-difftool
+
+[difftool "default-difftool"]
+
+    # Set default difftool
+    cmd = code --wait --diff $LOCAL $REMOTE
+
 [diff "bin"]
 
 	# Use `hexdump` to diff binary files
