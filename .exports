@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-# Default editor.
-export EDITOR='subl -w'
+# Default editor: VS Code
+export EDITOR='code'
 
 # Enable persistent REPL history for `node`.
 export NODE_REPL_HISTORY=~/.node_history;
@@ -28,3 +28,10 @@ export LESS_TERMCAP_md="${yellow}";
 
 # Don’t clear the screen after quitting a manual page.
 export MANPAGER='less -X';
+
+# Avoid issues with `gpg` as installed via Homebrew.
+# https://stackoverflow.com/a/42265848/96656
+# export GPG_TTY=$(tty);
+
+# Get list of Git modified files
+export MODIFIED=`git status --short | sed -ne "s/^ M //p"`

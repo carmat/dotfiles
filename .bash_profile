@@ -1,37 +1,15 @@
-export PATH="$PATH:/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin"
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH";
-# Use Ruby 2.2.1
-export PATH="/opt/ruby2.2.1/bin/ruby:$PATH"
+
 # Use PHP 5.6.21
 export PATH="/usr/local/php5/bin:$PATH"
-# Use Composer for Laravel
-export PATH="~/.composer/vendor/bin:$PATH"
+
 # Maven for Java/Tomcat
-export MAVEN_HOME=/Applications/Maven
-export PATH="$PATH:$MAVEN_HOME/bin"
-
-eval "$(rbenv init -)"
-
-export MODIFIED=`git status --short | sed -ne "s/^ M //p"`
-alias edit='$EDITOR $MODIFIED'
-
-## Show full path and current branch in bash
-parse_git_branch() {
-    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
-}
-
-## Git auto-complete branch names and commands
-## @usage: TAB to complete/show options
-if [ -f ~/.git-completion.bash ]; then
-  . ~/.git-completion.bash
-fi
-
-## Homebrew auto-complete commands
-## @usage: TAB to complete/show options
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-    . $(brew --prefix)/etc/bash_completion
-fi
+# Java/Maven
+export MAVEN_HOME="/Applications/apache-maven-3.5.2"
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home"
+export M2_HOME="$HOME/.m2"
+export PATH="$MAVEN_HOME/bin:$PATH"
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
@@ -64,7 +42,18 @@ elif [ -f /etc/bash_completion ]; then
 	source /etc/bash_completion;
 fi;
 
-# Enable tab completion for `g` and `gti` by marking it as an alias for `git`
+## Show full path and current branch in bash
+parse_git_branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
+## Git auto-complete branch names and commands
+## @usage: TAB to complete/show options
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+fi
+
+# Enable tab completion for `g` by marking it as an alias for `git`
 if type _git &> /dev/null && [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
 	complete -o default -o nospace -F _git g;
 	complete -o default -o nospace -F _git gti;
@@ -80,6 +69,21 @@ complete -W "NSGlobalDomain" defaults;
 # Add `killall` tab completion for common apps
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
 
-[[ -s $HOME/.pythonbrew/etc/bashrc ]] && source $HOME/.pythonbrew/etc/bashrc
+### --- UNUSED --- ###
 
+# Use Ruby 2.2.1
+# export PATH="/opt/ruby2.2.1/bin/ruby:$PATH"
+
+# Use Composer for Laravel
+# export PATH="~/.composer/vendor/bin:$PATH"
+
+# export PATH="$PATH:/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin"
+
+## Homebrew auto-complete commands
+## @usage: TAB to complete/show options
+# if [ -f $(brew --prefix)/etc/bash_completion ]; then
+#     . $(brew --prefix)/etc/bash_completion
+# fi
+
+# [[ -s $HOME/.pythonbrew/etc/bashrc ]] && source $HOME/.pythonbrew/etc/bashrc
 # ln -s /usr/local/Cellar/openssl/1.0.2h_1/bin/openssl /usr/local/bin/openssl

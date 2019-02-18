@@ -18,6 +18,9 @@
 	# Pull in remote changes for the current repository and all its submodules
 	p = !"git pull; git submodule foreach git pull origin master"
 
+	# Fetch (prune) and Pull (rebase) remote changes for the current repository
+	pr = !"git fetch --prune; git pull --reabse"
+
 	# Clone a repository including all submodules
 	c = clone --recursive
 
@@ -33,9 +36,6 @@
 
     # Autosquash
     sq = rebase -i --autosquash
-
-	# Pull all remote changes
-    pr = pull --rebase
 
     # Create a new branch
     br = branch
@@ -124,6 +124,10 @@
 	# Prevent showing files whose names contain non-ASCII symbols as unversioned.
 	# http://michael-kuehnel.de/git/2014/11/21/git-mac-osx-and-german-umlaute.html
 	precomposeunicode = false
+
+	# Speed up commands involving untracked files such as `git status`.
+	# https://git-scm.com/docs/git-update-index#_untracked_cache
+	untrackedCache = true
 
 [color]
 

@@ -8,5 +8,11 @@ end_of_line = lf
 insert_final_newline = true
 trim_trailing_whitespace = true
 
-[*.css,*.scss,*.sass]
+[*.js,*.jsx,*.vue]
+indent_size = 2
+
+[*.html,*.mustache]
+indent_size = 4
+
+[*.css,*.scss,*.sass,*.less]
 indent_size = 4

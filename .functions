@@ -244,13 +244,13 @@ function getcertnames() {
 # }
 
 # `o` with no arguments opens the current directory, otherwise opens the given location
-# function o() {
-# 	if [ $# -eq 0 ]; then
-# 		open .;
-# 	else
-# 		open "$@";
-# 	fi;
-# }
+function o() {
+	if [ $# -eq 0 ]; then
+		open .;
+	else
+		open "$@";
+	fi;
+}
 
 # `tre` is a shorthand for `tree` with hidden files and color enabled, ignoring
 # the `.git` directory, listing directories first. The output gets piped into
@@ -259,29 +259,6 @@ function getcertnames() {
 function tre() {
 	tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX;
 }
-
-# Set title on each tab
-# ====================================
-# Gets the repository directory
-# name and current branch name
-#
-# If the current directory is not a
-# git repo, a tabname can be specified
-# ====================================
-# @usage: tabname (git)
-# @usage: tabname name (non-git)
-# function tabname {
-#   if [ "$1" ]; then
-#     printf "\e]1;$1\a"
-#   elif [ -d .git ]; then
-#     repo=$(basename `git rev-parse --show-toplevel`)
-#     branch="$(git symbolic-ref --short -q HEAD)" ||
-#     branch="(unnamed branch)"     # detached HEAD
-#     printf "\e]1;("$repo") "$branch"\a"
-#   else
-#     printf "\e]1;$1\a"
-#   fi
-# }
 
 ## Open the current branch in browser
 ## ====================================
@@ -440,8 +417,7 @@ function gh() {
 ## Open a saved git-stash in IDE
 ## ====================================
 ## Open a specific git stash in a text editor of choice.
-## Defaulted to Sublime Text 3
-## Ideally, open the stash with color-coded tex background,
+## Ideally, open the stash with color-coded text background,
 ## i.e. deletions, -> bg = red, additions -> bg = green
 ## ====================================
 ## @usage: gst
@@ -456,17 +432,17 @@ function gst() {
 
 ## Create Markdown note
 ## ====================================
-function note() {
-    local target_dir="$HOME/Notes"
-    local timestamp=$(date +"%Y%M%d")
-    local filepath="$target_dir/$timestamp-$1.md"
+# function note() {
+#     local target_dir="$HOME/Notes"
+#     local timestamp=$(date +"%Y%M%d")
+#     local filepath="$target_dir/$timestamp-$1.md"
 
-    # make a new `~/Notes` directory if it doesn't exist
-    mkdir -p $target_dir
+#     # make a new `~/Notes` directory if it doesn't exist
+#     mkdir -p $target_dir
 
-    # create a new file in `~/Notes`
-    touch $filepath
+#     # create a new file in `~/Notes`
+#     touch $filepath
 
-    # open the new file in Sublime
-    subl $filepath
-}
+#     # open the new file in Sublime
+#     subl $filepath
+# }
