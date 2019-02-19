@@ -9,6 +9,7 @@ export PATH="/usr/local/php5/bin:$PATH"
 export MAVEN_HOME="/Applications/apache-maven-3.5.2"
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home"
 export M2_HOME="$HOME/.m2"
+# export MAVEN_OPTS="-Xms1024m -Xmx1G -javaagent:$HOME/springloaded-1.2.5.RELEASE.jar -noverify"
 export PATH="$MAVEN_HOME/bin:$PATH"
 
 # Load the shell dotfiles, and then some:
