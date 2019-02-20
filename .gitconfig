@@ -19,7 +19,7 @@
 	p = !"git pull; git submodule foreach git pull origin master"
 
 	# Fetch (prune) and Pull (rebase) remote changes for the current repository
-	pr = !"git fetch --prune; git pull --reabse"
+	pr = !"git fetch --prune; git pull --rebase"
 
 	# Clone a repository including all submodules
 	c = clone --recursive
