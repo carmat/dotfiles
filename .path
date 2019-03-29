@@ -1,0 +1,13 @@
+# Add `~/bin` to the `$PATH`
+export PATH="$HOME/bin:$PATH";
+
+# Add JAVA_HOME to the `$PATH`
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home
+export PATH="$JAVA_HOME:$PATH";
+
+# Add MAVEN_HOME to the `$PATH`
+export MAVEN_HOME=/opt/apache-maven-3.6.0/bin
+export PATH="$MAVEN_HOME:$PATH";
+
+# Use PHP 5.6.21
+export PATH="/usr/local/php5/bin:$PATH"
