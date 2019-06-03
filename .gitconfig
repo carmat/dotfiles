@@ -130,7 +130,7 @@
 	untrackedCache = true
 
 	# Set Git editor to VS Code
-	editor = code -wait
+	editor = code --wait
 
 [color]
 
