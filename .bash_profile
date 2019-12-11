@@ -56,13 +56,13 @@ complete -W "NSGlobalDomain" defaults;
 # Add `killall` tab completion for common apps
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
 
+# Use Composer for Laravel
+export PATH="~/.composer/vendor/bin:$PATH"
+
 ### --- UNUSED --- ###
 
 # Use Ruby 2.2.1
 # export PATH="/opt/ruby2.2.1/bin/ruby:$PATH"
-
-# Use Composer for Laravel
-# export PATH="~/.composer/vendor/bin:$PATH"
 
 # export PATH="$PATH:/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin"
 
