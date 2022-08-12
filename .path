@@ -2,7 +2,7 @@
 export PATH="$HOME/bin:$PATH";
 
 # Add JAVA_HOME to the `$PATH`
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home
 export PATH="$JAVA_HOME:$PATH";
 
 # Add MAVEN_HOME to the `$PATH`
