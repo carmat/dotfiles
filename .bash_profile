@@ -59,6 +59,11 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 # Use Composer for Laravel
 export PATH="~/.composer/vendor/bin:$PATH"
 
+# Java
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk-11.0.10.jdk/Contents/Home"
+export M2_HOME="/usr/local/apache-maven-3.6.3"
+export PATH="$PATH:$JAVA_HOME:$M2_HOME"
+
 ### --- UNUSED --- ###
 
 # Use Ruby 2.2.1
