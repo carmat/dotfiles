@@ -62,7 +62,7 @@ export PATH="~/.composer/vendor/bin:$PATH"
 # Java
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk-11.0.10.jdk/Contents/Home"
 export M2_HOME="/usr/local/apache-maven-3.6.3"
-export PATH="$PATH:$JAVA_HOME:$M2_HOME"
+export PATH="$PATH:$JAVA_HOME/bin:$M2_HOME/bin"
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
