@@ -1,6 +1,9 @@
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH";
 
+# Homebrew
+export PATH=/opt/homebrew/bin:$PATH
+
 # Add JAVA_HOME to the `$PATH`
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home
 export PATH="$JAVA_HOME:$PATH";
