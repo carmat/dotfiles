@@ -1,3 +1,11 @@
+[credential]
+	helper = "!f() { /home/node/.vscode-server/bin/e54c774e0add60467559eb0d1e229c6452cf8447/node /tmp/vscode-remote-containers-60002617-3b71-4f4e-a173-713311f7cb36.js git-credential-helper $*; }; f"
+
+[safe]
+	directory = /workspaces
+	directory = /workspaces/portfolio-consulting-workspace
+	directory = /workspaces/dist-ds-portfolio-consulting
+
 [alias]
 
 	# View abbreviated SHA, description, and history graph of the latest 20 commits
@@ -109,6 +117,8 @@
 	whitespace = fix
 
 [core]
+	autocrlf = false
+	filemode = false
 
 	# Use custom `.gitignore` and `.gitattributes`
 	excludesfile = ~/.gitignore
@@ -199,6 +209,12 @@
     autosetuprebase = always
 
 # URL shorthands
+
+[url "git@bitbucket.org:"]
+
+	insteadOf = "bb:"
+	pushInsteadOf = "bitbucket:"
+	pushInsteadOf = "git://bitbucket.org/"
 
 [url "git@github.com:"]
 

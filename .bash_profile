@@ -49,24 +49,24 @@ fi;
 # Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
 [ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2- | tr ' ' '\n')" scp sftp ssh;
 
-# Add tab completion for `defaults read|write NSGlobalDomain`
-# You could just use `-g` instead, but I like being explicit
-complete -W "NSGlobalDomain" defaults;
+# # Add tab completion for `defaults read|write NSGlobalDomain`
+# # You could just use `-g` instead, but I like being explicit
+# complete -W "NSGlobalDomain" defaults;
 
-# Add `killall` tab completion for common apps
-complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
+# # Add `killall` tab completion for common apps
+# complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
 
-# Use Composer for Laravel
-export PATH="~/.composer/vendor/bin:$PATH"
+# # Use Composer for Laravel
+# export PATH="~/.composer/vendor/bin:$PATH"
 
-# Java
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home"
-export M2_HOME="/usr/local/apache-maven-3.6.3"
-export PATH="$PATH:$JAVA_HOME/bin:$M2_HOME/bin"
+# # Java
+# export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home"
+# export M2_HOME="/usr/local/apache-maven-3.6.3"
+# export PATH="$PATH:$JAVA_HOME/bin:$M2_HOME/bin"
 
-# NVM
-export NVM_DIR="$HOME/.nvm"
-export PATH="$PATH:$NVM_DIR"
+# # NVM
+# export NVM_DIR="$HOME/.nvm"
+# export PATH="$PATH:$NVM_DIR"
 
 ### --- UNUSED --- ###
 
@@ -84,6 +84,15 @@ export PATH="$PATH:$NVM_DIR"
 # [[ -s $HOME/.pythonbrew/etc/bashrc ]] && source $HOME/.pythonbrew/etc/bashrc
 # ln -s /usr/local/Cellar/openssl/1.0.2h_1/bin/openssl /usr/local/bin/openssl
 
-[[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh  # This loads NVM
-[[ -s $HOME/.nvm/nvm.sh ]] && \. $HOME/.nvm/nvm.sh  # This loads nvm
-[[ -s $HOME/.nvm/bash_completion ]] && \. $HOME/.nvm/bash_completion  # This loads nvm bash_completion
+# [[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh  # This loads NVM
+# [[ -s $HOME/.nvm/nvm.sh ]] && \. $HOME/.nvm/nvm.sh  # This loads nvm
+# [[ -s $HOME/.nvm/bash_completion ]] && \. $HOME/.nvm/bash_completion  # This loads nvm bash_completion
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+export NVM_DIR="/usr/local/share/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
