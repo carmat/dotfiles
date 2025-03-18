@@ -8,11 +8,15 @@ alias ~="cd ~" # `cd` is probably faster to type though
 # alias .....="cd ../../../.."
 # alias -- -="cd -"
 
+# APPLICATION SHORTCUTS
+alias pa='cd ~/portfolio-analyser/'
+alias app='cd ~/portfolio-analyser/app/portfolio-consulting/'
+
 # # SHORTCUTS
 # alias dl="cd ~/Downloads/"
 # alias dt="cd ~/Desktop/"
 # alias sites='cd ~/Sites/'
-# alias app='cd ~/Apps/'
+
 alias h="history"
 alias cc='clear'
 alias pr='git fetch --prune && git pull --rebase'
