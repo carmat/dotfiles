@@ -57,12 +57,11 @@ complete -W "NSGlobalDomain" defaults;
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
 
 # Use Composer for Laravel
-export PATH="~/.composer/vendor/bin:$PATH"
+# export PATH="~/.composer/vendor/bin:$PATH"
 
 # Java
-# export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home"
-# export JAVA_HOME="/opt/homebrew/opt/openjdk@17/libexec/openjdk.jdk/Contents/Home"
-export JAVA_HOME="/opt/homebrew/opt/openjdk@25/libexec/openjdk.jdk/Contents/Home"
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home"
+# export JAVA_HOME="/opt/homebrew/opt/openjdk@25/libexec/openjdk.jdk/Contents/Home"
 export M2_HOME="/usr/local/apache-maven-3.6.3"
 export PATH="$PATH:$JAVA_HOME/bin:$M2_HOME/bin"
 
